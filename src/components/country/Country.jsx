@@ -18,7 +18,7 @@ const Country = ({country, countryFlag, countryCode, handleVisitedCountries}) =>
             <h2 style={{color: visited ? 'black' : 'gray'}}>{country?.common}</h2>
             <p><small style={{color: visited ? 'black' : 'gray'}}>Code: {countryCode}</small></p>
 
-            <button>Visited Container</button>
+            <button onClick={() => handleVisitedCountries(country)}>Visited Container</button>
             <hr />
             <button onClick={handleVisited}>{visited ? 'Visited' : 'Going'}</button>
             {visited ? 'I have visited' : 'I want to visit'}
